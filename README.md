@@ -4,7 +4,7 @@ The C.E.R Pattern is a basic Command, Execution and Result pattern aimed at web 
 ## How does it work?
 The CER Pattern works by stacking up commands in an aggregate then processing them using a command execution service. That service would then push out a result object based on what command was processed. Similar to CQRS the data written can be different to the data output from the execution process.
 
-![Visual Process Chart](http://lparkermg.github.com/CERPattern/img/pattern.png)
+![Visual Process Chart](https://raw.githubusercontent.com/lparkermg/CERPattern/master/img/pattern.png)
 
 _This is the basic visual process of how the CER Pattern works._
 
