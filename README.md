@@ -8,6 +8,14 @@ The CER Pattern works by stacking up commands in an aggregate then processing th
 
 _This is the basic visual process of how the CER Pattern works._
 
+## What are the different parts?
+
+**Command Object:** The command object is where the input data is sent to the Execution process(es). The object itself can hold data but not run anything at all since running anything would have to happen within the execution part of the pattern, this includes the command validation.
+
+**Execution Process(es):** The execution process(es) are where the commands get stored, then filtered to the specific execute handler and then validated and processed. The execution process basically handles what ever needs to be done by the command like store data, load data, move something etc, then once the process has finished it spits out the results object. The execution process could be made to be async and spawn x amount of threads if needed.
+
+**Results Object:** The Result object is where the data (along with any error data) from the execution process is put before it's sent to be read by the client. It can be expanded on but is required to have a reason phrase and status code in it this is mainly for ease of use when working with web based systems. 
+
 ## What can it be used for?
 
 The pattern itself can be used in a variety of applications and a few games as well.
